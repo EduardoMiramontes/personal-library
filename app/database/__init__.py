@@ -1,0 +1,1 @@
+# Módulo para conexión y operaciones con la base de datos PostgreSQL.

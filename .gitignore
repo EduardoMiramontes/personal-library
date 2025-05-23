@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Jupyter
+.ipynb_checkpoints
+
+# Entornos virtuales
+venv/
+.env/
+
+# MacOS
+.DS_Store
+
+# Archivos de prueba
+*.sqlite
+*.log
