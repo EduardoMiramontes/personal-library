@@ -3,7 +3,7 @@ from app.logic.book_manager import BookManager
 class BookManagerGUI(BookManager):
     def buscar_libros(self, titulo, autor):
         resultados = self.google.buscar_libros(f"{titulo} {autor}")
-        return resultados[:5] if resultados else []
+        return resultados[:10] if resultados else []
 
     def obtener_detalles_libro(self, libro_id):
         return self.google.obtener_datos_libro(libro_id)

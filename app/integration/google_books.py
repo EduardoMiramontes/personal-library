@@ -16,11 +16,13 @@ class GoogleBooksClient:
         resultados = []
         for item in items:
             info = item.get("volumeInfo", {})
+            portada_url = info.get("imageLinks", {}).get("thumbnail") 
             resultados.append({
                 "id": item.get("id"),
                 "titulo": info.get("title", "Sin título"),
                 "autor": ", ".join(info.get("authors", ["Desconocido"])),
-                "fecha": info.get("publishedDate", "s/f")
+                "fecha": info.get("publishedDate", "s/f"),
+                "portada": portada_url 
             })
 
         return resultados
