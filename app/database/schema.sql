@@ -22,7 +22,7 @@ CREATE TABLE FORMATO (
     nombre_formato VARCHAR(100)
 );
 
--- Tabla: CATEGORÍA
+-- Tabla: CATEGORIA
 CREATE TABLE CATEGORIA (
     id_categoria INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     nombre_categoria VARCHAR(100)
@@ -61,13 +61,13 @@ CREATE TABLE LIBRO_AUTOR (
     FOREIGN KEY (id_autor) REFERENCES AUTOR(id_autor)
 );
 
--- Tabla: LIBRO_CATEGORÍA
+-- Tabla: LIBRO_CATEGORIA
 CREATE TABLE LIBRO_CATEGORIA (
     id_libro INT,
     id_categoria INT,
     PRIMARY KEY (id_libro, id_categoria),
     FOREIGN KEY (id_libro) REFERENCES LIBRO(id_libro),
-    FOREIGN KEY (id_categoria) REFERENCES CATEGORÍA(id_categoria)
+    FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria)
 );
 
 
